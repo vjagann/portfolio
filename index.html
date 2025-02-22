@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagannath Venkatagiri | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Jagannath Venkatagiri</h1>
+            <p>Supply Chain & Operations Strategy | Logistics | Process Optimization</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-left">
+                <img src="images/profile.jpg" alt="Jagannath Venkatagiri">
+            </div>
+            <div class="hero-right">
+                <h2>Hi, I'm Jagannath!</h2>
+                <p>A Supply Chain & Operations Enthusiast</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I specialize in supply chain strategy, warehouse optimization, and last-mile logistics. With experience at Amazon and Swiggy, I have led multiple projects in process optimization and cost reduction.</p>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-card">
+                <h3>Master’s in Global Supply Chain Management</h3>
+                <p>Purdue University | Expected December 2024</p>
+            </div>
+            <div class="education-card">
+                <h3>Bachelor’s in Mechanical Engineering</h3>
+                <p>SRM University | July 2020</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <span>SQL</span>
+                <span>Coupa</span>
+                <span>Snowflake</span>
+                <span>Workday</span>
+                <span>SAP</span>
+                <span>Tulip</span>
+                <span>Power BI</span>
+                <span>MS Excel (Power Pivot, Solver)</span>
+                <span>Logistics Management</span>
+                <span>Supply Chain Optimization</span>
+                <span>Data Visualization</span>
+                <span>Agile Methodology</span>
+                <span>Python</span>
+                <span>Process Automation</span>
+                <span>Demand Forecasting</span>
+                <span>Operational Efficiency</span>
+                <span>Project Management</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="section">
+        <div class="container">
+            <h2>Achievements</h2>
+            <div class="achievement-card">
+                <h3>Swiggy Award</h3>
+                <p>Recognized among the Top 10 Business Managers in the Country.</p>
+            </div>
+            <div class="achievement-card">
+                <h3>Amazon Award</h3>
+                <p>Winner of Best Kaizen of the Year for process improvement initiatives.</p>
+            </div>
+            <div class="achievement-card">
+                <h3>Lean Six Sigma Green Belt</h3>
+                <p>Certified in process optimization and efficiency improvements.</p>
+            </div>
+            <div class="achievement-card">
+                <h3>PMP Certification (In Progress)</h3>
+                <p>Preparing for the Project Management Professional certification.</p>
+            </div>
+            <div class="achievement-card">
+                <h3>Leadership</h3>
+                <p>Served as President of Rotaract Club and organized multiple medical camps.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:vjagannath59@gmail.com">vjagannath59@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/vjagann/" target="_blank">linkedin.com/in/vjagann/</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jagannath Venkatagiri | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade-in Animations
+        const sections = document.querySelectorAll(".section");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = "translateY(50px)";
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
